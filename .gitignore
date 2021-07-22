@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 /scripts/md5.py
 /ARCHIVES/
+/scripts/build/
