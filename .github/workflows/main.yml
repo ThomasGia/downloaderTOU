@@ -18,6 +18,10 @@ jobs:
         working-directory: ./scripts
 
     steps:
+      - name: List files in the repository
+        run: |
+        ls ${{ github.workspace }}
+      - run: echo "🍏 This job's status is ${{ job.status }}."
       - uses: actions/checkout@v2
       - name: Setup Python
         uses: actions/setup-python@v2
@@ -28,10 +32,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r '*/scripts/requirement.txt'
 #         pip install pyinstaller
-        - name: List files in the repository
-          run: |
-            ls ${{ github.workspace }}
-        - run: echo "🍏 This job's status is ${{ job.status }}."
+
 
 #       - name: build with pyinstaller
 #         run: |
