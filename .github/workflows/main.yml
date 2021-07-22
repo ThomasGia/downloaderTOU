@@ -27,8 +27,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r '*/scripts/requirement.txt'
-#          pip install pyinstaller
-          
+#         pip install pyinstaller
+        - name: List files in the repository
+          run: |
+            ls ${{ github.workspace }}
+        - run: echo "🍏 This job's status is ${{ job.status }}."
 
 #       - name: build with pyinstaller
 #         run: |
