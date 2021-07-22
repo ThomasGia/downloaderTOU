@@ -31,7 +31,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install pyinstaller
-       - name: build with pyinstaller
-         run: |
-            pyinstaller --onefile --noconsole --icon res/among_us.ico --name "Town Of Us" main.py
+      - name: build with pyinstaller
+        run: |
+          pyinstaller --onefile --noconsole --icon res/among_us.ico --name "Town Of Us" main.py
 
